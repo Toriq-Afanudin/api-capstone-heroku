@@ -27,5 +27,5 @@ func main() {
 	address := fmt.Sprintf("%s:%s", "0.0.0.0", port)
 	fmt.Println(address)
 
-	r.Run(address)
+	r.Run()
 }
