@@ -17,6 +17,7 @@ func main() {
 		c.Set("db", db)
 		c.Next()
 	})
+	r.GET("/", controller.Utama)
 	r.GET("/pasien", controller.Get_pasien)
 	r.POST("/pasien", controller.Post_pasien)
 	r.GET("/login", controller.Login)

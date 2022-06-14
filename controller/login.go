@@ -11,6 +11,12 @@ type login struct {
 	Password string `form:"password"`
 }
 
+func Utama(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"status": "selamat datang di aplikasi heroku",
+	})
+}
+
 func Login(c *gin.Context) {
 	db := c.MustGet("db").(*gorm.DB)
 	var login login
